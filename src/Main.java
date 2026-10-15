@@ -7,11 +7,11 @@ public class Main {
 
         System.out.println("===== CUARTEL DE HEROES =====");
 
-        // 1. Constructor por defecto
+        // Invoca el constructor por defecto
         Heroe recluta = new Heroe();
         recluta.presentarse();
 
-        // 2. Constructor con datos leídos del teclado
+        // Lee los datos del teclado e invoca el constructor con parametros
         System.out.print("Nombre del nuevo heroe: ");
         String nombre = sc.nextLine();
         System.out.print("Origen: ");
@@ -22,13 +22,10 @@ public class Main {
         Heroe nuevo = new Heroe(nombre, origen, poder);
         nuevo.presentarse();
 
-        // RETO 1: Uso de getNombre()
-        System.out.println("El nombre del nuevo heroe obtenido con getNombre() es: " + nuevo.getNombre());
+        System.out.println("Nombre obtenido: " + nuevo.getNombre());
 
-        // RETO 2: Tercer héroe propio
-        Heroe miHeroe = new Heroe("Doctor Doom", "Latveria", 99);
-        System.out.print("Tercer heroe: ");
-        miHeroe.presentarse();
+        Heroe tercerHeroe = new Heroe("Doctor Doom", "Latveria", 99);
+        tercerHeroe.presentarse();
 
         sc.close();
     }
